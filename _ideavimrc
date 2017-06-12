@@ -1,0 +1,44 @@
+set so=2
+set rnu         ' show relative line number
+
+' append ; to end of line
+imap <A-;> <Esc>A;
+
+' append { to end of line
+imap <A-[> <Esc>A<Space>{
+
+' jump to next word
+imap <A-n> <Esc>ea
+
+' jump to previous word
+imap <A-p> <Esc>bi
+
+' move left
+imap <A-h> <Esc>i
+
+' move down
+imap <A-j> <Esc>ja
+
+' move up
+imap <A-k> <Esc>ka
+
+' move right
+imap <A-l> <Esc>la
+
+' new line
+imap <A-o> <Esc>o
+
+' delete line
+imap <A-d><A-d> <Esc>ddA
+
+' half page down
+nmap <Space> <C-d>
+
+' append ; to end of line
+nmap <A-;> <Esc>A;
+
+' append { to end of line
+nmap <A-[> <Esc>A<Space>{
+
+' delete a pair of parenthesis when curor is at one of them, using mark Z
+nmap <A-d><A-[> mZ%x`Zx
