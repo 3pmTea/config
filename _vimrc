@@ -12,6 +12,9 @@ Plugin 'ervandew/supertab'
 Plugin 'mhinz/vim-startify'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'NewProggie/NewProggie-Color-Scheme'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -25,12 +28,12 @@ set sessionoptions-=winsize
 set sessionoptions-=buffers
 set nu
 set rnu
-color industry
 set so=2
 set switchbuf+=usetab,newtab
 set tabstop=4 shiftwidth=4 expandtab
 set nobackup
 set noswapfile
+colo newproggie
 if has("gui_running")
     set lines=47 columns=190
     set guifont=Consolas:h14:cANSI
@@ -114,3 +117,11 @@ let g:airline#extensions#default#layout = [
   \ [ 'y', 'z' ]
   \ ]
 let g:airline_section_z = '%l,%c | %L'
+let g:airline#extensions#tabline#enabled = 1
+
+"==================== jsx ====================
+let g:jsx_ext_required = 0
+
+"==================== tagbar ====================
+"let g:tagbar_left = 1
+nmap <F8> :TagbarToggle<CR>
