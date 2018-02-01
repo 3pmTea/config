@@ -1,0 +1,34 @@
+// custom keybindings
+[{
+    "key": "alt+k",
+    "command": "cursorUp",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+l",
+    "command": "cursorRight",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+h",
+    "command": "cursorLeft",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+j",
+    "command": "cursorDown",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+n",
+    "command": "cursorWordEndRight",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+p",
+    "command": "cursorWordStartLeft",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+.",
+    "command": "cursorLineEnd",
+    "when": "editorTextFocus"
+}, {
+    "key": "alt+;",
+    "command": "cursorLineEnd",
+    "when": "editorTextFocus"
+}]

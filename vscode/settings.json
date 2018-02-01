@@ -1,0 +1,36 @@
+// vscode custom settings
+{
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "window.zoomLevel": 1,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "files.autoSave": "afterDelay",
+
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "vim.leader": ",",
+    "vim.handleKeys": {
+        "<C-v>": false,
+    },
+    "vim.insertModeKeyBindings": [{
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }, {
+        "before": ["alt+;"],
+        "after": ["<Esc>", "A", ";"]
+    }],
+    "vim.otherModesKeyBindingsNonRecursive": [{
+        "before": ["f"],
+        "after": ["<leader>", "<leader>", "s"]
+    }, {
+        "before": ["<Space>"],
+        "after": ["<C-d>"]
+    }, {
+        "before": ["<S-Space>"],
+        "after": ["<C-u>"]
+    }],
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.statusBarColors": {},
+    "vim.easymotionMarkerBackgroundColor": "red",
+    "vim.easymotionMarkerYOffset": 4,
+    "vim.easymotionMarkerFontWeight": "bold",
+}
