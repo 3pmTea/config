@@ -42,3 +42,6 @@ nmap <A-[> <Esc>A<Space>{
 
 ' delete a pair of parenthesis when curor is at one of them, using mark Z
 nmap <A-d><A-[> mZ%x`Zx
+
+' AceJump
+map f :action AceAction<CR>
