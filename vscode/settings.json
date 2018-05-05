@@ -1,14 +1,15 @@
 // vscode custom settings
 {
-    "workbench.colorTheme": "Monokai Dark Soda",
     "window.zoomLevel": 1,
-    "vim.disableAnnoyingNeovimMessage": true,
     "files.autoSave": "afterDelay",
 
     "vim.easymotion": true,
     "vim.hlsearch": true,
     "vim.leader": ",",
     "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-x>": false,
+        "<C-c>": false,
         "<C-v>": false,
     },
     "vim.insertModeKeyBindings": [{
@@ -33,4 +34,8 @@
     "vim.easymotionMarkerBackgroundColor": "red",
     "vim.easymotionMarkerYOffset": 4,
     "vim.easymotionMarkerFontWeight": "bold",
+    "workbench.colorTheme": "Abyss",
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
 }
