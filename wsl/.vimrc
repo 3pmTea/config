@@ -1,8 +1,10 @@
 "===== prepare plugins START =====
 filetype plugin indent off
 syntax off
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+"set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'easymotion/vim-easymotion'
@@ -11,29 +13,26 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'mhinz/vim-startify'
 Plugin 'vim-scripts/SearchComplete'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'NewProggie/NewProggie-Color-Scheme'
 Plugin 'majutsushi/tagbar'
+Plugin 'miyakogi/conoline.vim'
+Plugin 'NewProggie/NewProggie-Color-Scheme'
+Plugin 'crusoexia/vim-monokai'
 call vundle#end()
 filetype plugin indent on
 syntax on
 "===== prepare plugins END =====
 
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-set sessionoptions-=options
-set sessionoptions-=winsize
-set sessionoptions-=buffers
 set nu
-set rnu
 set so=2
 set switchbuf+=usetab,newtab
 set tabstop=4 shiftwidth=4 expandtab
+set hlsearch
+set cst
+set t_Co=256
+set timeout timeoutlen=50
 set nobackup
 set noswapfile
-colo newproggie
+colo desert
 if has("gui_running")
     set lines=47 columns=190
     set guifont=Consolas:h14:cANSI
@@ -48,49 +47,43 @@ nnoremap <Space> <C-d>
 nnoremap <S-Space> <C-u>
 vnoremap <Space> <C-d>
 vnoremap <S-Space> <C-u>
-nmap <A-j> <C-w>j<C-w>_
-nmap <A-k> <C-w>k<C-w>_
-nmap <A-h> <C-w>h<C-w>_
-nmap <A-l> <C-w>l<C-w>_
-map <A-q> <C-w>q
-" map <C-K>r :execute "vimgrep /" . expand("<cword>") . "/j **/*" <Bar> cw<CR>
+nmap <Esc>j <C-w>j<C-w>_
+nmap <Esc>k <C-w>k<C-w>_
+nmap <Esc>h <C-w>h<C-w>_
+nmap <Esc>l <C-w>l<C-w>_
+nnoremap <Esc>, <C-w><
+nnoremap <Esc>. <C-w>>
+map <Esc>q <C-w>q
 
 " append ; to end of line
-imap <A-;> <Esc>A;
+imap <Esc>; <Esc>A;
 
 " append { to end of line
 " imap <A-[> <Esc>A<Space>{
 
 " move left
-imap <A-h> <Esc>i
+imap <Esc>h <Esc>i
 
 " move down
-imap <A-j> <Esc>ja
+imap <Esc>j <Esc>ja
 
 " move up
-imap <A-k> <Esc>ka
+imap <Esc>k <Esc>ka
 
 " move right
-imap <A-l> <Esc>la
+imap <Esc>l <Esc>la
 
 " new line
-imap <A-o> <Esc>o
+" imap <Esc>o <Esc>o
 
 " append ; to end of line
-nmap <A-;> <Esc>A;
+nmap <Esc>; <Esc>A;
 
 " append { to end of line
-nmap <A-[> <Esc>A<Space>{
+nmap <Esc>[ <Esc>A<Space>{
 
-nmap <A-left> <C-o>
-nmap <A-right> <C-i>
-
-if has("win32")
-  " Open in Windows Explorer
-    nnoremap <silent> <C-F4> :if expand("%:p:h") != "" \| exec "!start explorer.exe" expand("%:p:h:S") \| endif<CR>
-  " Open SVN diff for current file
-"    nnoremap <silent> <C-F5> :if expand("%:p") != "" \| exec "!start TortoiseProc.exe /command:diff /path:" . shellescape(expand("%:p")) . "/closeonend:0" \| endif<CR>
-endif
+nmap <Esc>left <C-o>
+nmap <Esc>right <C-i>
 
 
 " auto save session
@@ -105,7 +98,6 @@ vmap F <Plug>(easymotion-s)
 
 "==================== ctrlp ====================
 map <F5> :CtrlPCurWD<CR>
-" let g:ctrlp_cmd = 'CtrlP e:/int/server/lua'
 " let g:ctrlp_switch_buffer = 'Et'
 
 "==================== airline ====================
@@ -119,9 +111,10 @@ let g:airline#extensions#default#layout = [
 let g:airline_section_z = '%l,%c | %L'
 let g:airline#extensions#tabline#enabled = 1
 
-"==================== jsx ====================
-let g:jsx_ext_required = 0
-
 "==================== tagbar ====================
 "let g:tagbar_left = 1
 nmap <F8> :TagbarToggle<CR>
+
+"==================== conoline ====================
+let g:conoline_auto_enable = 1
+

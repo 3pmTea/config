@@ -11,6 +11,7 @@
         "<C-x>": false,
         "<C-c>": false,
         "<C-v>": false,
+        "<C-f>": false,
     },
     "vim.insertModeKeyBindings": [{
         "before": ["j", "j"],
@@ -19,7 +20,7 @@
         "before": ["alt+;"],
         "after": ["<Esc>", "A", ";"]
     }],
-    "vim.otherModesKeyBindingsNonRecursive": [{
+    "vim.normalModeKeyBindingsNonRecursive": [{
         "before": ["f"],
         "after": ["<leader>", "<leader>", "s"]
     }, {
