@@ -5,7 +5,6 @@ syntax off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -25,7 +24,7 @@ syntax on
 set nu
 set so=2
 set switchbuf+=usetab,newtab
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 set hlsearch
 set cst
 set t_Co=256
@@ -57,6 +56,9 @@ map <Esc>q <C-w>q
 
 " append ; to end of line
 imap <Esc>; <Esc>A;
+
+" jump to end of line
+imap <Esc>n <Esc>A
 
 " append { to end of line
 " imap <A-[> <Esc>A<Space>{
@@ -97,12 +99,12 @@ nmap F <Plug>(easymotion-s)
 vmap F <Plug>(easymotion-s)
 
 "==================== ctrlp ====================
-map <F5> :CtrlPCurWD<CR>
+" map <F5> :CtrlPCurWD<CR>
 " let g:ctrlp_switch_buffer = 'Et'
 
 "==================== airline ====================
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:airline#extensions#tabline#close_symbol='X'
 let g:airline#extensions#default#layout = [
   \ [ 'x', 'b', 'c' ],
@@ -113,7 +115,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "==================== tagbar ====================
 "let g:tagbar_left = 1
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 
 "==================== conoline ====================
 let g:conoline_auto_enable = 1
